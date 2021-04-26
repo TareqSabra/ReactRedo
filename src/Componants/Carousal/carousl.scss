@@ -1,0 +1,12 @@
+$text-alinment: center;
+.itemTitle {
+  text-align: $text-alinment;
+  color: black;
+}
+.itemPicture {
+  margin-left: 20%;
+}
+.itemPrice {
+  text-align: $text-alinment;
+  color: red;
+}

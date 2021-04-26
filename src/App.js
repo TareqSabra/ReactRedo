@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import NavBar from './Componants/NavBar/navBar';
+import { Taps } from './Resources/data/Taps';
+import { Route } from 'react-router-dom';
+import HomePage from "./Pages/HomePage/homePage"
+import Product from "./Pages/ProductsPage/products"
+import ShopingCart from "./Pages/ShopingcartPage/ShCart"
+import Footer from "./Componants/footer/footer"
 function App() {
+  const info = {
+    retweetValue: 20,
+    favValue: 20,
+    cart_badeValue: 20,
+    cartValue: 12
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <React.Fragment>
+      <NavBar taps={Taps} NavInfo={info} ></NavBar>
+      <div >
+        <Route path="/" exact component={HomePage} />
+        <Route path="/Products" exact component={Product} />
+        <Route path="/Shopping-cart" exact component={ShopingCart} />
+      </div>
+      <Footer />
+    </React.Fragment>
 
+  )
+}
 export default App;
