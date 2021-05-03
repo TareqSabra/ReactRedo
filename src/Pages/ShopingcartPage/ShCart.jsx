@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./Shoopingcart.scss";
 function ShCart({ location }) {
   const tax = 5;
+
   console.log(location);
   const [amount, setamount] = useState(location.sc.amount);
   const [item, setitem] = useState(location.sc.item);
@@ -70,6 +71,9 @@ function ShCart({ location }) {
                         name="textValue"
                         Value={amount}
                         className="inputS"
+                        onChange={(event) =>
+                          settotalprice(event.target.value * item.itemPrice)
+                        }
                       />
                       <AddIcon className="icon" onClick={handelIncrement} />
                       <h5 className="font-weight-bolder mt-2 ml-3">

@@ -12,7 +12,7 @@ export const Taps = [
   {
     tapName: "page",
     tapTitel: "PAGES",
-    tapUrl: "#",
+    tapUrl: "/Pages",
   },
   {
     tapName: "lookbook",

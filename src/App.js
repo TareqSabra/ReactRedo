@@ -6,6 +6,7 @@ import { Route } from 'react-router-dom';
 import HomePage from "./Pages/HomePage/homePage"
 import Product from "./Pages/ProductsPage/products"
 import ShopingCart from "./Pages/ShopingcartPage/ShCart"
+import Page from "./Pages/Page/Page"
 import Footer from "./Componants/footer/footer"
 function App() {
   const info = {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/" exact component={HomePage} />
         <Route path="/Products" exact component={Product} />
         <Route path="/Shopping-cart" exact component={ShopingCart} />
+        <Route path="/Pages" exact component={Page} />
       </div>
       <Footer />
     </React.Fragment>
